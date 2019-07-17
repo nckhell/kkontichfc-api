@@ -21,7 +21,7 @@ class ContactSubmissionController extends Controller
 		// Send e-mail
         Mail::send('mails.contact-message', ['data' => $request->all()], function ($m) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-            $m->to('info@kkontichfc.be', 'Info - K. Kontich F.C.')->subject('Nieuwe vraag via contactformulier op kkonticfc.be');
+            $m->to('info@kkontichfc.be', 'Info - K. Kontich F.C.')->subject('Nieuwe vraag via contactformulier op kkontichfc.be');
             $m->bcc('nickhellemans93+kkfc@gmail.com', 'Nick Hellemans');
         });
 
