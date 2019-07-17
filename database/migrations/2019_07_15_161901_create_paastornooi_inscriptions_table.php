@@ -13,7 +13,7 @@ class CreatePaastornooiInscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('paastornooi_inscriptions', function (Blueprint $table) {
+        Schema::create('API_paastornooi_inscriptions', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('gc');
                 $table->string('club');
@@ -36,6 +36,6 @@ class CreatePaastornooiInscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paastornooi_inscriptions');
+        Schema::dropIfExists('API_paastornooi_inscriptions');
     }
 }

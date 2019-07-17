@@ -13,7 +13,7 @@ class CreateYouthInscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('youth_inscriptions', function (Blueprint $table) {
+        Schema::create('API_youth_inscriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('firstname');
             $table->string('lastname');
@@ -47,6 +47,6 @@ class CreateYouthInscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('youth_inscriptions');
+        Schema::dropIfExists('API_youth_inscriptions');
     }
 }

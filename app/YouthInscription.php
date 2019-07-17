@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class YouthInscription extends Model
 {
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'API_youth_inscriptions';
+
     /**
      * Indicates if the model should be timestamped.
      *
