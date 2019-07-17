@@ -37,9 +37,8 @@ class YouthInscriptionController extends Controller
 		// Send e-mail
         Mail::send('mails.youthinscription-confirmation', ['data' => $request->all()], function ($m) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-            // $m->bcc('nickhellemans93@gmail.com', 'Nick Hellemans');
-            $m->to('nickhellemans93@gmail.com', 'Info - K. Kontich F.C.')->subject('Online inschrijving via kkontichfc.be');
-            // $m->to('jeugd@kkontichfc.be', 'Info - K. Kontich F.C.')->subject('Online inschrijving via kkontichfc.be');
+            $m->to('jeugd@kkontichfc.be', 'Info - K. Kontich F.C.')->subject('Online inschrijving jeugd via kkontichfc.be');
+            $m->bcc('nickhellemans93+kkfc@gmail.com', 'Nick Hellemans');
         });
 
         return (new YouthInscriptionResource($youthInscription))

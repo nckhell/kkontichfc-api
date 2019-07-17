@@ -28,18 +28,9 @@ class PaastornooiInscriptionController extends Controller
 		// Send e-mail
         Mail::send('mails.paastornooi-confirmation', ['data' => $request->all()], function ($m) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-            // $m->bcc('nickhellemans93@gmail.com', 'Nick Hellemans');
-            $m->to('nickhellemans93@gmail.com', 'Info - K. Kontich F.C.')->subject('Inschrijving Paastornooi via kkontichfc.be');
-            // $m->to('jeugd@kkontichfc.be', 'Info - K. Kontich F.C.')->subject('Inschrijving Paastornooi via kkontichfc.be');
+            $m->to('jeugd@kkontichfc.be', 'Jeugd - K. Kontich F.C.')->subject('Inschrijving Paastornooi via kkontichfc.be');
+            $m->bcc('nickhellemans93+kkfc@gmail.com', 'Nick Hellemans');
         });
-
-		// Send e-mail
-        // Mail::send('mails.paastornooi-confirmation', ['data' => $data], function ($m) use ($data) {
-        //     $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-        //     $m->bcc(['nickhellemans93@gmail.com']);
-        //     $m->cc('jeugd@kkontichfc.be', 'Jeugd - K. Kontich F.C.');
-        //     $m->to($data['email'], $data['contactName'])->subject('Inschrijving paastornooi via kkontichfc.be');
-        // });
 
         return (new PaastornooiInscriptionResource($paastornooiInscription))
                 ->response()

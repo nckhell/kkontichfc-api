@@ -13,5 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/youth-inscriptions', 'YouthInscriptionController@index');
 Route::post('/youth-inscriptions', 'YouthInscriptionController@store');
 Route::post('/paastornooi-inscriptions', 'PaastornooiInscriptionController@store');
+Route::post('/contact', 'ContactSubmissionController@store');
