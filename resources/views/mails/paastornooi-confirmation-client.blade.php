@@ -146,7 +146,7 @@
                                 <td align="center" style="font-size: 32px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">Inschrijving Paastornooi (Vermant-Cup) goed ontvangen!</td>
                             </tr>
                             <tr>
-                                <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">We hebben je inschrijving voor ons Paastornooi (Vermant Cup) goed ontvangenn je kan hieronder de details van je inschrijving nalezen. Hou onze website en facebookpagina in de gaten voor meer nieuws omtrent het tornooi en aankondiging van de speelschema's.</td>
+                                <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">We hebben je inschrijving voor ons Paastornooi (Vermant Cup) goed ontvangen. Je kan hieronder de details van je inschrijving nalezen.<br/><br/>Houd onze website en facebookpagina in de gaten voor meer nieuws omtrent het tornooi en aankondiging van de speelschema's.</td>
                             </tr>
                         </table>
                     </td>

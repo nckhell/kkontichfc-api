@@ -31,9 +31,9 @@ class PaastornooiInscriptionController extends Controller
             $m->bcc('nickhellemans93+kkfc@gmail.com', 'Nick Hellemans');
         });
 
-        Mail::send('mails.paastornooi-confirmation-client', ['data' => $request->all()], function ($m) {
+        Mail::send('mails.paastornooi-confirmation-client', ['data' => $request->all()], function ($m) use($request) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-            $m->to($paastornooiInscription->contactEmail, $paastornooiInscription->contactName)->subject('Inschrijving Paastornooi via kkontichfc.be');
+            $m->to($request->input('contactEmail'), $request->input('contactName'))->subject('Inschrijving Paastornooi via kkontichfc.be');
         });
 
         return (new PaastornooiInscriptionResource($paastornooiInscription))
