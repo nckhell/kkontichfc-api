@@ -1,0 +1,42 @@
+html, body {
+    height: 100%
+}
+
+#flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.success-message {
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .success-message__icon {
+    max-width: 75px;
+  }
+  
+  .success-message__title {
+    color: #3dc480;
+    transform: translateY(25px);
+    transition: all 200ms ease;
+  }
+  .active .success-message__title {
+    transform: translateY(0);
+  }
+  
+  .success-message__content {
+    color: #b8babb;
+    transform: translateY(25px);
+    transition: all 200ms ease;
+    transition-delay: 50ms;
+  }
+  .active .success-message__content {
+    transform: translateY(0);
+  }
+  
+  .icon-checkmark circle {
+    fill: #3dc480;
+  }

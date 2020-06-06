@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/kleding', 'KledingController@index');
+Route::post('/kleding', 'KledingController@store');
