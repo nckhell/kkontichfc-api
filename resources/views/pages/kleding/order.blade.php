@@ -45,7 +45,7 @@
 
         <div class="form-group">
             <label for="birth_date">Geboortedatum</label>
-            <input type="date" class="form-control" name="birth_date" id="birth_date" value="{{ old('birth_date') }}" required>
+            <input type="date" class="form-control" name="birth_date" id="birth_date" value="{{ old('birth_date') }}" placeholder="dd/mm/yyyy" required>
         </div>
 
         <hr>

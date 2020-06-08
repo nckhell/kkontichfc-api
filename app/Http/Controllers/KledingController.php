@@ -22,7 +22,7 @@ class KledingController extends Controller
                 'firstname' => 'required',
                 'lastname' => 'required',
                 'email' => 'required|email',
-                'birth_date' => 'required|date',
+                'birth_date' => 'required',
                 'member_type' => 'required',
                 'sweater_champ' => 'required',
                 'socks_glasgow' => 'required',

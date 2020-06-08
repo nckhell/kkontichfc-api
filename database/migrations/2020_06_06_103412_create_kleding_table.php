@@ -18,7 +18,7 @@ class CreateKledingTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email');
-            $table->date('birth_date');
+            $table->string('birth_date');
             $table->enum('member_type', ['NEW', 'EXISTING'])->nullable();
             $table->string('sweater_champ');
             $table->string('socks_glasgow');
