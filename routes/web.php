@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/kleding', 'KledingController@index');
+Route::get('/covid', 'CovidController@index');
+Route::get('/covid-registratie', 'CovidController@registrationForm');
+Route::post('/covid-registratie', 'CovidController@store');
 Route::post('/kleding', 'KledingController@store');

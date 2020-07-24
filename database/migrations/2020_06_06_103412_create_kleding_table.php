@@ -36,6 +36,6 @@ class CreateKledingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kleding');
+        Schema::dropIfExists('API_kleding');
     }
 }
