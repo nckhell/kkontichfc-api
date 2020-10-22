@@ -19,3 +19,6 @@ Route::get('/covid', 'CovidController@index');
 Route::get('/covid-registratie', 'CovidController@registrationForm');
 Route::post('/covid-registratie', 'CovidController@store');
 Route::post('/kleding', 'KledingController@store');
+
+Route::get('/pasta-take-away', 'BestellingController@index');
+Route::post('/pasta-take-away', 'BestellingController@store');
