@@ -21,6 +21,9 @@ class CreateBestellingTable extends Migration
             $table->string('email');
             $table->text('order');
             $table->string('total_price');
+            $table->string('ophaal_of_levering');
+            $table->string('dag');
+            $table->string('uur');
             $table->timestamps();
         });
     }

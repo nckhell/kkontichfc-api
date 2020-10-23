@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group">
-                <label for="address">Adres (straat, huisnummer, postode & gemeente)</label>
+                <label for="address">Adres (straat, huisnummer, postcode & gemeente)</label>
                 <input type="text" class="form-control" name="address" id="posaddresstal" placeholder="Adres" value="{{ old('address') }}" required>
             </div>
 
@@ -46,6 +46,7 @@
                 <label for="email">Email</label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="bezoeker@kkontichfc.be" value="{{ old('email') }}" required>
             </div>
+
             <hr style="margin-top: 2rem; margin-bottom: 2rem;"/>
             <h4>Uw bestelling</h4>
             <div class="form-group">
@@ -81,7 +82,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Tagliatelli met gegrilde zalm & groentjes </th>
+                                <th scope="row">Tagliatelli met gegrilde zalm & groentjes</th>
                                 <td>13 EUR</td>
                                 <td>
                                     <input type="number" class="form-control" name="order[tagiatelli_zalm_en_groentjes]" id="order[tagiatelli_zalm_en_groentjes]" value="{{ old('order[tagiatelli_zalm_en_groentjes]') }}" min="0" style="width: 75px;">
@@ -95,7 +96,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Tagliatelli met scampi’s - lookroom </th>
+                                <th scope="row">Tagliatelli met scampi’s - lookroom</th>
                                 <td>13 EUR</td>
                                 <td>
                                     <input type="number" class="form-control" name="order[tagiatelli_scampis_lookroom]" id="order[tagiatelli_scampis_lookroom]" value="{{ old('order[tagiatelli_scampis_lookroom]') }}" min="0" style="width: 75px;">
@@ -125,6 +126,37 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Ophalen of levering</label>
+                <select class="form-control" name="ophaal_of_levering" id="ophaal_of_levering">
+                    <option value="ophaling">Ik kom mijn bestelling ophalen</option>
+                    <option value="levering">Ik wil mijn bestelling aan huis laten leveren</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Dag van ophaling of levering</label>
+                <select class="form-control" name="dag" id="dag">
+                    <option value="zaterdag 14 november 2020">Zaterdag 14 november 2020</option>
+                    <option value="zondag 15 november 2020">Zondag 15 november 2020</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Kies een uur waarop u uw bestelling wil komen ophalen of graag geleverd ziet</label>
+                <select class="form-control" name="uur" id="uur">
+                    <option value="16u">16u</option>
+                    <option value="16u30">16u30</option>
+                    <option value="17u">17u</option>
+                    <option value="17u30">17u30</option>
+                    <option value="18u">18u</option>
+                    <option value="18u30">18u30</option>
+                    <option value="19u">19u</option>
+                    <option value="19u30">19u30</option>
+                    <option value="20u">20u</option>
+                </select>
             </div>
 
             <input class="btn btn-primary bt-lg btn-block" type="submit" value="Verzenden" />

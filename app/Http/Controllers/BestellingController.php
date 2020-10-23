@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Bestelling;
 use App\Http\Resources\PaastornooiInscription as PaastornooiInscriptionResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class BestellingController extends Controller
@@ -57,8 +58,17 @@ class BestellingController extends Controller
             'email' => $request->input('email'),
             'tel' => $request->input('tel'),
             'total_price' => strval($total_price),
-            'order' => array_filter($request->input('order'))
+            'order' => array_filter($request->input('order')),
+            'ophaal_of_levering' => $request->input('ophaal_of_levering'),
+            'dag' => $request->input('dag'),
+            'uur' => $request->input('uur')
         ]);
+
+        Mail::send('mails.bestelling-confirmation', ['bestelling' => $bestelling], function ($m) use ($bestelling) {
+            $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
+            $m->to($bestelling->email, $bestelling->name)->subject('Bestelling KKFC - Pasta Take Away Weekend');
+            $m->bcc(['nickhellemans93+kkfc@gmail.com', 'wim.claes@kontich.be']);
+        });
 
         return view('pages.bestelling.success')->with('bestelling', $bestelling);
     }

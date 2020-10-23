@@ -40,6 +40,9 @@ class Bestelling extends Model
         'tel',
         'email',
         'order',
-        'total_price'
+        'total_price',
+        'ophaal_of_levering',
+        'dag',
+        'uur'
     ];
 }
