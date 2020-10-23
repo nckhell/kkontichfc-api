@@ -67,7 +67,7 @@ class BestellingController extends Controller
         Mail::send('mails.bestelling-confirmation', ['bestelling' => $bestelling], function ($m) use ($bestelling) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
             $m->to($bestelling->email, $bestelling->name)->subject('Bestelling KKFC - Pasta Take Away Weekend');
-            $m->bcc(['nickhellemans93+kkfc@gmail.com', 'wim.claes@kontich.be']);
+            $m->bcc(['nickhellemans93+kkfc@gmail.com', 'claes.wim@hotmail.com']);
         });
 
         return view('pages.bestelling.success')->with('bestelling', $bestelling);
