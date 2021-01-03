@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Bestelling Take Away Pasta Weekend')
+@section('title', 'Bestelling Take Away Stoofpotjes Weekend')
 
 @section('content')
 <div class="col-md-4 py-4 container bg-default d-flex align-items-center">
@@ -10,7 +10,7 @@
         </div>
 
         <h3 class="mt-4 mb-4 text-center">
-            Bestelling Take Away Pasta Weekend
+            Bestelling Take Away Stoofpotjes Weekend
         </h3>
 
         @if ($errors->any())
@@ -49,6 +49,7 @@
 
             <hr style="margin-top: 2rem; margin-bottom: 2rem;"/>
             <h4>Uw bestelling</h4>
+            <p>Alle gerechten worden geserveerd met verse kroketten (nog te bakken!) en witloofsalade.</p>
             <div class="form-group">
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -61,52 +62,31 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Pompoensoep (1L)</th>
+                                <th scope="row">Broccoli – Courgettesoep</th>
                                 <td>4 EUR</td>
                                 <td>
-                                    <input type="number" class="form-control" name="order[pompoensoep]" id="order[pompoensoep]" value="{{ old('order[pompoensoep]') }}" min="0" style="width: 75px;">
+                                    <input type="number" class="form-control" name="order[broccoli_courgettesoep]" id="order[broccoli_courgettesoep]" value="{{ old('order[broccoli_courgettesoep]') }}" min="0" style="width: 75px;">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Spaghetti Bolognaise</th>
-                                <td>10 EUR</td>
+                                <th scope="row">Stoofpotje van rundsvlees</th>
+                                <td>15 EUR</td>
                                 <td>
-                                    <input type="number" class="form-control" name="order[spaghetti_bolognaise]" id="order[spaghetti_bolognaise]" value="{{ old('order[spaghetti_bolognaise]') }}" min="0" style="width: 75px;">
+                                    <input type="number" class="form-control" name="order[stoofpotje_rundvlees]" id="order[stoofpotje_rundvlees]" value="{{ old('order[stoofpotje_rundvlees]') }}" min="0" style="width: 75px;">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Tagliatelli met kip & champignons</th>
-                                <td>13 EUR</td>
+                                <th scope="row">Stoofpotje van kip</th>
+                                <td>15 EUR</td>
                                 <td>
-                                    <input type="number" class="form-control" name="order[tagiatelli_kip_champignons]" id="order[tagiatelli_kip_champignons]" value="{{ old('order[tagiatelli_kip_champignons]') }}" min="0" style="width: 75px;">
+                                    <input type="number" class="form-control" name="order[stoofpotje_kip]" id="order[stoofpotje_kip]" value="{{ old('order[stoofpotje_kip]') }}" min="0" style="width: 75px;">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Tagliatelli met gegrilde zalm & groentjes</th>
-                                <td>13 EUR</td>
+                                <th scope="row">Vispannetje</th>
+                                <td>15 EUR</td>
                                 <td>
-                                    <input type="number" class="form-control" name="order[tagiatelli_zalm_en_groentjes]" id="order[tagiatelli_zalm_en_groentjes]" value="{{ old('order[tagiatelli_zalm_en_groentjes]') }}" min="0" style="width: 75px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tagliatelli met scampi’s - curry</th>
-                                <td>13 EUR</td>
-                                <td>
-                                    <input type="number" class="form-control" name="order[tagiatelli_scampis_curry]" id="order[tagiatelli_scampis_curry]" value="{{ old('order[tagiatelli_scampis_curry]') }}" min="0" style="width: 75px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tagliatelli met scampi’s - lookroom</th>
-                                <td>13 EUR</td>
-                                <td>
-                                    <input type="number" class="form-control" name="order[tagiatelli_scampis_lookroom]" id="order[tagiatelli_scampis_lookroom]" value="{{ old('order[tagiatelli_scampis_lookroom]') }}" min="0" style="width: 75px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tagliatelli met scampi’s - tomatenroomsaus</th>
-                                <td>13 EUR</td>
-                                <td>
-                                    <input type="number" class="form-control" name="order[tagiatelli_scampis_tomatenroomsaus]" id="order[tagiatelli_scampis_tomatenroomsaus]" value="{{ old('order[tagiatelli_scampis_tomatenroomsaus]') }}" min="0" style="width: 75px;">
+                                    <input type="number" class="form-control" name="order[vispannetje]" id="order[vispannetje]" value="{{ old('order[vispannetje]') }}" min="0" style="width: 75px;">
                                 </td>
                             </tr>
                             <tr>
@@ -139,8 +119,8 @@
             <div class="form-group">
                 <label for="email">Dag van ophaling of levering</label>
                 <select class="form-control" name="dag" id="dag">
-                    <option value="zaterdag 14 november 2020">Zaterdag 14 november 2020</option>
-                    <option value="zondag 15 november 2020">Zondag 15 november 2020</option>
+                    <option value="zaterdag 6 februari 2021">Zaterdag 6 februari 2021</option>
+                    <option value="zondag 7 februari 2021">Zondag 7 februari 2021</option>
                 </select>
             </div>
 

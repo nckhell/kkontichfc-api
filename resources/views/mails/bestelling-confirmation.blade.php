@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>K. Kontich F.C. - Pasta Take Away Weekend</title>
+<title>K. Kontich F.C. - Take Away Stoofpotjes Weekend</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,7 +102,7 @@
 
 <!-- HIDDEN PREHEADER TEXT -->
 <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Uw bestelling - Pasta Take Away Weekend
+    Uw bestelling - Take Away Stoofpotjes Weekend
 </div>
 
 <!-- HEADER -->
@@ -143,7 +143,7 @@
                         <!-- COPY -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td align="center" style="font-size: 32px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">Pasta Take Away Weekend</td>
+                                <td align="center" style="font-size: 32px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">Take Away Stoofpotjes Weekend</td>
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">We hebben uw bestelling goed ontvangen, bedankt voor uw steun! Hieronder vindt u een overzicht van uw bestelling.</td>
@@ -473,26 +473,17 @@
                                                         <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">
                                                             <b>
                                                             @switch($key)
-                                                                @case("pompoensoep")
-                                                                    Pompoensoep (1L) - €4
+                                                                @case("broccoli_courgettesoep")
+                                                                    Broccoli – Courgettesoep - €4
                                                                     @break
-                                                                @case("spaghetti_bolognaise")
-                                                                    Spaghetti Bolognaise - €10
+                                                                @case("stoofpotje_rundvlees")
+                                                                    Stoofpotje van rundsvlees - €15
                                                                     @break
-                                                                @case("tagiatelli_kip_champignons")
-                                                                    Tagliatelli met kip & champignons - €13
+                                                                @case("stoofpotje_kip")
+                                                                    Stoofpotje van kip - €15
                                                                     @break
-                                                                @case("tagiatelli_zalm_en_groentjes")
-                                                                    Tagliatelli met gegrilde zalm & groentjes - €13
-                                                                    @break
-                                                                @case("tagiatelli_scampis_curry")
-                                                                    Tagliatelli met scampi’s - curry - €13
-                                                                    @break
-                                                                @case("tagiatelli_scampis_lookroom")
-                                                                    Tagliatelli met scampi’s - lookroom - €13
-                                                                    @break
-                                                                @case("tagiatelli_scampis_tomatenroomsaus")
-                                                                    Tagliatelli met scampi’s - tomatenroomsaus - €13
+                                                                @case("vispannetje")
+                                                                    Vispannetje - €15
                                                                     @break
                                                                 @case("tiramisu")
                                                                     Tiramisu - €2.5

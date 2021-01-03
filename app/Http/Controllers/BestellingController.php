@@ -27,28 +27,22 @@ class BestellingController extends Controller
         );
             
         if ($validator->fails()) {
-            return redirect('pasta-take-away')
+            return redirect('take-away-stoofpotjes')
             ->withErrors($validator)
             ->withInput();
         }
 
-        $total_pompoensoep = (int)$request->input('order.pompoensoep') * 4;
-        $total_spaghetti_bolognaise = (int)$request->input('order.spaghetti_bolognaise') * 10;
-        $total_tagiatelli_kip_champignons = (int)$request->input('order.tagiatelli_kip_champignons') * 13;
-        $total_tagiatelli_zalm_en_groentjes = (int)$request->input('order.tagiatelli_zalm_en_groentjes') * 13;
-        $total_tagiatelli_scampis_curry = (int)$request->input('order.tagiatelli_scampis_curry') * 13;
-        $total_tagiatelli_scampis_lookroom = (int)$request->input('order.tagiatelli_scampis_lookroom') * 13;
-        $total_tagiatelli_scampis_tomatenroomsaus = (int)$request->input('order.tagiatelli_scampis_tomatenroomsaus') * 13;
+        $total_broccoli_courgettesoep = (int)$request->input('order.broccoli_courgettesoep') * 4;
+        $total_stoofpotje_rundvlees = (int)$request->input('order.stoofpotje_rundvlees') * 15;
+        $total_stoofpotje_kip = (int)$request->input('order.stoofpotje_kip') * 15;
+        $total_vispannetje = (int)$request->input('order.vispannetje') * 15;
         $total_tiramisu = (int)$request->input('order.tiramisu') * 2.5;
         $total_chocolademousse = (int)$request->input('order.chocolademousse') * 2.5;
 
-        $total_price = $total_pompoensoep 
-        + $total_spaghetti_bolognaise 
-        + $total_tagiatelli_kip_champignons 
-        + $total_tagiatelli_zalm_en_groentjes 
-        + $total_tagiatelli_scampis_curry 
-        + $total_tagiatelli_scampis_lookroom 
-        + $total_tagiatelli_scampis_tomatenroomsaus 
+        $total_price = $total_broccoli_courgettesoep 
+        + $total_stoofpotje_rundvlees 
+        + $total_stoofpotje_kip 
+        + $total_vispannetje 
         + $total_tiramisu
         + $total_chocolademousse;
 
@@ -66,7 +60,7 @@ class BestellingController extends Controller
 
         Mail::send('mails.bestelling-confirmation', ['bestelling' => $bestelling], function ($m) use ($bestelling) {
             $m->from('no-reply@kkontichfc.be', 'K. Kontich F.C.');
-            $m->to($bestelling->email, $bestelling->name)->subject('Bestelling KKFC - Pasta Take Away Weekend');
+            $m->to($bestelling->email, $bestelling->name)->subject('Bestelling KKFC - Take Away Stoofpotjes Weekend');
             $m->bcc(['nickhellemans93+kkfc@gmail.com', 'claes.wim@hotmail.com']);
         });
 

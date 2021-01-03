@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Bestelling Take Away Pasta Weekend')
+@section('title', 'Bestelling Take Away Stoofpotjes Weekend')
 
 @section('content')
 <div id="flex">
@@ -11,7 +11,8 @@
         </svg>
         <h2 class="success-message__title">Bedankt, we hebben uw bestelling succesvol ontvangen!</h2>
         <div class="success-message__content" style="color: #000;">
-            <p><b>Het totaalbedrag van uw bestelling bedraagt {{$bestelling->total_price}} EUR, u ontvangt ook een bevestiging via email.</b> Het bedrag is te betalen op het moment van afhaling of levering.<br><br><a href="https://kkontichfc.be" title="Sluiten">Klik hier om deze pagina te sluiten.</a></p>
+            <!-- <p><b>Het totaalbedrag van uw bestelling bedraagt {{$bestelling->total_price}} EUR, u ontvangt ook een bevestiging via email.</b> Het bedrag is te betalen op het moment van afhaling of levering.<br><br><a href="https://kkontichfc.be" title="Sluiten">Klik hier om deze pagina te sluiten.</a></p> -->
+            <p><b>Het totaalbedrag van uw bestelling bedraagt {{$bestelling->total_price}} EUR.</b> Het bedrag is te betalen op het moment van afhaling of levering.<br><br><a href="https://kkontichfc.be" title="Sluiten">Klik hier om deze pagina te sluiten.</a></p>
         </div>
     </div>
 </div>
