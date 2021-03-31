@@ -20,5 +20,10 @@ Route::get('/covid-registratie', 'CovidController@registrationForm');
 Route::post('/covid-registratie', 'CovidController@store');
 Route::post('/kleding', 'KledingController@store');
 
-Route::get('/take-away-stoofpotjes', 'BestellingController@index');
-Route::post('/take-away-stoofpotjes', 'BestellingController@store');
+// Route::get('/paasontbijt', 'PaasontbijtController@index');
+// Route::post('/paasontbijt', 'PaasontbijtController@store');
+Route::post('/kennismakingsdagen', 'KennismakingsdagenController@store');
+Route::post('/kennismakingsdagen', 'KennismakingsdagenController@store');
+
+// Route::get('/take-away-stoofpotjes', 'BestellingController@index');
+// Route::post('/take-away-stoofpotjes', 'BestellingController@store');
